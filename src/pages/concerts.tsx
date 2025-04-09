@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import ConcertRow from '../components/concertrow'
 
 type ConcertInfo = {
