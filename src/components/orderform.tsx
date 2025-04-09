@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import ReactDOM from 'react-dom/client';
 
 type OrderFormData = {
     ConcertId: number;
@@ -19,7 +18,7 @@ type OrderFormData = {
 
 const OrderForm = ({concertId}: {concertId: String}) => {
     const concertNum: number = Number(concertId);
-    const [errorMessage, setErrorMessage] = useState([]);
+    const [errorMessage, setErrorMessage] = useState<string[]>([]);
     const [submittedForm, setSubmittedForm] = useState(false);
 
     const [values, setValues] = useState<OrderFormData>({
@@ -58,7 +57,7 @@ const OrderForm = ({concertId}: {concertId: String}) => {
             const errorData = await response.json();
             console.error('Error submitting order:', errorData);
             if (errorData.status = 400){
-                const errorMessages = [];
+                const errorMessages: string[] = [];
                 for (const errorType in errorData.errors){
                     if(errorData.errors.hasOwnProperty(errorType) && Array.isArray(errorData.errors[errorType])){
                         errorData.errors[errorType].forEach((error) =>{
@@ -77,7 +76,7 @@ const OrderForm = ({concertId}: {concertId: String}) => {
           setErrorMessage([]);
         } catch (error) {
           console.error('There was an error sending the order:', error);
-          setErrorMessage([{"Unknown": "An error occured. Please try again later."}]);
+          setErrorMessage(["Unknown: An error occured. Please try again later."]);
         }
     }
 
@@ -86,7 +85,7 @@ const OrderForm = ({concertId}: {concertId: String}) => {
             {errorMessage && (
                 <div className="error">
                     <ul>
-                        {errorMessage.map((e, index) => (
+                        {errorMessage.map((e: string, index) => (
                             <li key={index}>{e}</li>
                         ))}
                     </ul>
