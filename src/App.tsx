@@ -3,8 +3,6 @@ import Layout from './pages/layout'
 import ConcertsPage from './pages/concerts'
 import OrderPage from './pages/order'
 
-    //Remove me later
-
 function App() {
 
   return (
@@ -13,7 +11,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Layout />}>
           <Route index element={<ConcertsPage />} />
-          <Route path="order/:concertId" element={<OrderPage />} />
+          <Route path="order/:concertId?" element={<OrderPage />} />
         </Route>
       </Routes>
     

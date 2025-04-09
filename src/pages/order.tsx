@@ -7,25 +7,28 @@ const OrderPage = () => {
         concertId: string;
     }
 
+    const validConcerts : number[] = [123, 321, 111];
+
     const { concertId } = useParams<OrderParams>();
     const nav = useNavigate();
-
-    useEffect(() => {
-        if (!concertId){
-            nav("/");
-        }
-    }, [concertId, nav]);
-
-    if(!concertId){
-        return null;
+    if(!concertId || !validConcerts.includes(Number(concertId))){
+        nav("/")
     }
-
-    return(
-        <>
-            <h1> Buying tickets for Concert #{concertId} </h1>
-            <OrderForm concertId={concertId}/>
-        </>
-    )
+  
+    if (!validConcerts.includes(Number(concertId))) {
+        return(
+            <div className="error">
+                <p>Invalid Concert ID.</p>
+            </div>
+        )
+    } else {
+        return(
+            <>
+                <h1> Buying tickets for Concert #{concertId} </h1>
+                <OrderForm concertId={concertId!}/>
+            </>
+        )
+    }
 }
 
 export default OrderPage;
