@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import { ConcertInfo } from '../../dummy_concerts'
-import styles from './ConcertRow.module.css'
+import styles from './concertrow.module.css'
 
 interface ConcertRowProps {
     concert: ConcertInfo;
