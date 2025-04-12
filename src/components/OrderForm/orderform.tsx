@@ -21,7 +21,7 @@ type OrderFormData = {
 const OrderForm = ({concertId}: {concertId: String}) => {
     const concertNum: number = Number(concertId);
     const [errorMessage, setErrorMessage] = useState<string[]>([]);
-    const [submittedForm, setSubmittedForm] = useState(true);
+    const [submittedForm, setSubmittedForm] = useState(false);
 
     const [values, setValues] = useState<OrderFormData>({
         ConcertId: concertNum,
@@ -57,7 +57,6 @@ const OrderForm = ({concertId}: {concertId: String}) => {
     
           if (!response.ok) {
             const errorData = await response.json();
-            console.error('Error submitting order:', errorData);
             if (errorData.status = 400){
                 const errorMessages: string[] = [];
                 for (const errorType in errorData.errors){
@@ -72,12 +71,10 @@ const OrderForm = ({concertId}: {concertId: String}) => {
             }
             return;
           }
-    
-          console.log('Order submitted successfully:');
+
           setSubmittedForm(true);
           setErrorMessage([]);
         } catch (error) {
-          console.error('There was an error sending the order:', error);
           setErrorMessage(["Unknown: An error occured. Please try again later."]);
         }
     }
