@@ -1,0 +1,25 @@
+.orderInfo{
+    padding: 15px;
+    margin: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.concertImage {
+    max-width: 15%;
+    height: auto;
+}
+
+.concertDetails h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.concertDetails p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #555555;
+}

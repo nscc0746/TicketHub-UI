@@ -1,28 +1,23 @@
-input, select {
-  display: block;
-}
-
-form {
-  padding: 5px;
-  margin: 10px;
-}
-
-
-/* REMOVE ARROWS FROM NUMBER INPUTS */
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
+body {
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+h1 {
+  text-align: center;
 }
 
-.error {
-  background-color: red;
-  color: white;
+#root{
+  width: 98%;
+  max-width: 1200px;
+}
+
+#root ul {
+  padding: 0;
+  list-style: none;
 }

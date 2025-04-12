@@ -1,26 +1,15 @@
-import ConcertRow from '../components/concertrow'
-
-type ConcertInfo = {
-    Id: number,
-    Artist: string,
-    Name: string
-}
-
-const dummyConcerts: ConcertInfo[] = [
-    {Id: 123, Artist: "John Smith", Name: "Bleeding Hearts Tour"},
-    {Id: 321, Artist: "The Beep Boops", Name: "Concert in Canada"},
-    {Id: 111, Artist: "Dusty PC Fan", Name: "Running Crysis"}
-]
-
+import ConcertRow from '../components/ConcertRow/concertrow'
+import { dummyConcerts, ConcertInfo } from '../dummy_concerts';
 
 const ConcertsPage = () => {
-
     return(
         <>
-            <h1> Hi! </h1>
+            <h1> Upcoming Concerts </h1>
             <ul>
                 {dummyConcerts.map((c: ConcertInfo) => (
-                    <ConcertRow concertId={c.Id} artist={c.Artist} name={c.Name} />
+                    <li key={c.Id}>
+                        <ConcertRow concert={c} />
+                    </li>
                 ))}       
             </ul>
         </>

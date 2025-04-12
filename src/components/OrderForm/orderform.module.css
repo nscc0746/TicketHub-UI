@@ -1,0 +1,94 @@
+.orderForm{
+    padding: 15px;
+    margin: 1em;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin-bottom: 1em;
+    padding: 10px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.orderForm label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.orderForm input[type="text"],
+.orderForm input[type="email"],
+.orderForm input[type="tel"],
+.orderForm input[type="number"],
+.orderForm select {
+    display: block;
+    width: 100%;
+    padding: 0.75em;
+    margin-bottom: 0.5em;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.orderForm button[type="submit"] {
+    padding: 0.75em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: auto;
+}
+
+.errorContainer {
+    background-color: #b62b39;
+    color: white;
+    padding: 0.5em;
+    max-width: 75%;
+    margin-top: 1em;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.successContainer {
+    background-color: #409938;
+    color: white;
+    padding: 0.5em;
+    max-width: 75%;
+    margin: 1em auto;
+    border-radius: 3px;
+    text-align: center;
+}
+
+
+/* Mobile */
+@media (max-width:600px){
+    .formGroup {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Remove arrows from credit card input - Credit to W3Schools
+https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+
+/* Chrome, Safari, Edge, Opera */
+.creditCardInput::-webkit-outer-spin-button,
+.creditCardInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.creditCardInput[type=number] {
+  -moz-appearance: textfield;
+}

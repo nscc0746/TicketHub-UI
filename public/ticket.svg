@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   version="1.0"
+   id="Layer_1"
+   width="800px"
+   height="800px"
+   viewBox="0 0 64 64"
+   enable-background="new 0 0 64 64"
+   xml:space="preserve"
+   sodipodi:docname="ticket-svgrepo-com.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+   id="defs4" /><sodipodi:namedview
+   id="namedview4"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.72036503"
+   inkscape:cx="396.32684"
+   inkscape:cy="406.04414"
+   inkscape:window-width="1920"
+   inkscape:window-height="1017"
+   inkscape:window-x="-8"
+   inkscape:window-y="-8"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="g2" />
+<g
+   id="g2">
+	<path
+   style="fill:#f9f9f9;stroke-width:0.08"
+   d="M 1.1105481,40.090786 39.424457,1.3326577 63.07913,24.432058 24.209948,63.52335"
+   id="path6" /><path
+   fill="none"
+   stroke="#000000"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   d="M57,18c-1.504,1.504-2.705,2-5,2   c-4.59,0-8-3.41-8-8c0-2.295,0.496-3.496,2-5l-6-6L1,40l6,6c1.504-1.504,2.705-2,5-2c4.59,0,8,3.41,8,8c0,2.295-0.496,3.496-2,5   l6,6l39-39L57,18z"
+   id="path1" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="26"
+   y1="15"
+   x2="30"
+   y2="19"
+   id="line1" />
+	<line
+   fill="none"
+   stroke="#000000"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="45"
+   y1="34"
+   x2="49"
+   y2="38"
+   id="line2" />
+</g>
+<line
+   fill="none"
+   stroke="#000000"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="32"
+   y1="21"
+   x2="36"
+   y2="25"
+   id="line3"
+   style="fill:#ffffff" />
+<line
+   fill="none"
+   stroke="#000000"
+   stroke-width="2"
+   stroke-miterlimit="10"
+   x1="39"
+   y1="28"
+   x2="43"
+   y2="32"
+   id="line4" />
+</svg>

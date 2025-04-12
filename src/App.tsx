@@ -11,7 +11,7 @@ function App() {
       <Routes>
           <Route path="/" element={<Layout />}>
           <Route index element={<ConcertsPage />} />
-          <Route path="order/:concertId?" element={<OrderPage />} />
+          <Route path="concerts/:concertId?/order" element={<OrderPage />} />
         </Route>
       </Routes>
     

@@ -1,29 +1,29 @@
 import { useParams, useNavigate } from "react-router-dom"
-import OrderForm from '../components/orderform'
+import OrderForm from '../components/OrderForm/orderform'
+import OrderInfo from "../components/OrderInfo/orderinfo"
+
+import { dummyConcerts, ConcertInfo } from '../dummy_concerts'
 
 const OrderPage = () => {
     type OrderParams = {
         concertId: string;
     }
 
-    const validConcerts : number[] = [123, 321, 111];
-
     const { concertId } = useParams<OrderParams>();
+
+    const validConcerts : number[] = dummyConcerts.map((concert) => concert.Id)
+
+    const selectedId = Number(concertId);
+    const selectedConcert : ConcertInfo | undefined = dummyConcerts.find((concert) => concert.Id === selectedId)
     const nav = useNavigate();
-    if(!concertId || !validConcerts.includes(Number(concertId))){
+    
+    if(!concertId || !validConcerts.includes(selectedId)){
         nav("/")
-    }
-  
-    if (!validConcerts.includes(Number(concertId))) {
-        return(
-            <div className="error">
-                <p>Invalid Concert ID.</p>
-            </div>
-        )
     } else {
         return(
             <>
-                <h1> Buying tickets for Concert #{concertId} </h1>
+                <h1> Ordering Tickets </h1>
+                <OrderInfo concert={selectedConcert!} />
                 <OrderForm concertId={concertId!}/>
             </>
         )
