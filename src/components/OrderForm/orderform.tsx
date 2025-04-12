@@ -34,7 +34,7 @@ const OrderForm = ({concertId}: {concertId: String}) => {
         SecurityCode: '',
         Address: '',
         City: '',
-        Province: '',
+        Province: 'Alberta',
         PostalCode: '',
         Country: "Canada"
     });
